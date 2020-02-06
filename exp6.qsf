@@ -1,0 +1,75 @@
+# Copyright (C) 1991-2007 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		exp6_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name DEVICE EP1C6Q240C8
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name TOP_LEVEL_ENTITY exp6
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 7.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:26:42  MAY 10, 2009"
+set_global_assignment -name LAST_QUARTUS_VERSION 9.0
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 240
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+set_global_assignment -name VHDL_FILE all_clock.vhd
+set_global_assignment -name VHDL_FILE count60.vhd
+set_global_assignment -name VHDL_FILE count24.vhd
+set_global_assignment -name VHDL_FILE alert.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE count60.vwf
+set_global_assignment -name VHDL_FILE sel_time.vhd
+set_global_assignment -name VHDL_FILE deled.vhd
+set_global_assignment -name BDF_FILE exp6.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE exp6.vwf
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name CYCLONE_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_location_assignment PIN_98 -to lamp[4]
+set_location_assignment PIN_99 -to lamp[3]
+set_location_assignment PIN_100 -to lamp[2]
+set_location_assignment PIN_101 -to lamp[1]
+set_location_assignment PIN_102 -to lamp[0]
+set_location_assignment PIN_21 -to legag[0]
+set_location_assignment PIN_23 -to legag[1]
+set_location_assignment PIN_24 -to legag[2]
+set_location_assignment PIN_37 -to legag[3]
+set_location_assignment PIN_38 -to legag[4]
+set_location_assignment PIN_39 -to legag[5]
+set_location_assignment PIN_41 -to legag[6]
+set_location_assignment PIN_240 -to reset
+set_location_assignment PIN_66 -to set_hour
+set_location_assignment PIN_65 -to set_min
+set_location_assignment PIN_46 -to speak
+set_location_assignment PIN_64 -to set_second
+set_global_assignment -name VECTOR_WAVEFORM_FILE count24.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE count24.vwf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_location_assignment PIN_28 -to clk_10kHz
+set_global_assignment -name CYCLONE_CONFIGURATION_DEVICE EPC2
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name MISC_FILE "D:/数字钟(异步进位)/exp6.dpf"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_45 -to SEL[2]
+set_location_assignment PIN_44 -to SEL[1]
+set_location_assignment PIN_43 -to SEL[0]

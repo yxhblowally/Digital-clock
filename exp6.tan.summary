@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.371 ns
+From           : set_hour
+To             : count24:inst3|temp_clk
+From Clock     : --
+To Clock       : clk_10kHz
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 26.715 ns
+From           : sel_time:inst5|SEL[2]
+To             : legag[6]
+From Clock     : clk_10kHz
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 21.377 ns
+From           : reset
+To             : legag[6]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -5.857 ns
+From           : set_min
+To             : count60:inst2|temp_clk
+From Clock     : --
+To Clock       : clk_10kHz
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk_10kHz'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 167.98 MHz ( period = 5.953 ns )
+From           : all_clock:inst|Clk_Count1Hz[10]
+To             : all_clock:inst|Clk_Count1Hz[0]
+From Clock     : clk_10kHz
+To Clock       : clk_10kHz
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

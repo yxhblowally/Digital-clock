@@ -1,0 +1,796 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+
+VECTOR("D:/数字钟/count60.vwf")
+{
+	ZOOM{
+		ZBEGIN = 10591215;
+		ZEND = 11460015;
+		NUMERATOR = 543;
+		DENOMINATOR = 868800;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "Clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Reset";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "SetC";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut";
+		INDEX = 3;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[6]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[5]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[4]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[3]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[2]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[1]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[0]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Cout";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/数字钟/db/exp6.sim.cvwf")
+{
+	ZOOM{
+		ZBEGIN = 151236241;
+		ZEND = 151981521;
+		NUMERATOR = 608;
+		DENOMINATOR = 745280;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk_1kHz";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reset";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "set_hour";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "set_min";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "speak";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "seg_sel";
+		INDEX = 5;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "seg_sel[2]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "seg_sel[1]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "seg_sel[0]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "lamp";
+		INDEX = 9;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "lamp[4]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "lamp[3]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "lamp[2]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "lamp[1]";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "lamp[0]";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "BCD";
+		INDEX = 15;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "BCD[3]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "BCD[2]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "BCD[1]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "BCD[0]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "legag[6]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "legag[5]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "legag[4]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "legag[3]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "legag[2]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "legag[1]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "legag[0]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/数字钟/exp6.vwf")
+{
+	ZOOM{
+		ZBEGIN = 151280049;
+		ZEND = 151670674;
+		NUMERATOR = 659;
+		DENOMINATOR = 390625;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 1000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk_1kHz";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reset";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "set_hour";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "set_min";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "speak";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "seg_sel";
+		INDEX = 5;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "seg_sel[2]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "seg_sel[1]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "seg_sel[0]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "lamp";
+		INDEX = 9;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "lamp[4]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "lamp[3]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "lamp[2]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "lamp[1]";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "lamp[0]";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "BCD";
+		INDEX = 15;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "BCD[3]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "BCD[2]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "BCD[1]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "BCD[0]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("G:/EDA实验例程/EDA/数字钟(异步进位)/db/exp6.sim.cvwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 17379328;
+		NUMERATOR = 473;
+		DENOMINATOR = 17379328;
+		TOP_INDEX = 1;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "Clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Clk_5Hz";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Clk_10KHz";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut";
+		INDEX = 3;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[5]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[4]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[3]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[2]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[1]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[0]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Reset";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "SET";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "temp_clk";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("G:/EDA实验例程/EDA/数字钟(异步进位)/count24.vwf")
+{
+	ZOOM{
+		ZBEGIN = 12311040;
+		ZEND = 29898240;
+		NUMERATOR = 687;
+		DENOMINATOR = 17587200;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 5000000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "Clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Clk_5Hz";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Clk_10KHz";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut";
+		INDEX = 3;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[5]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[4]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[3]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[2]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[1]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CountOut[0]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Reset";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "SET";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "temp_clk";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}

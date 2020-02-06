@@ -1,0 +1,57 @@
+                             -------------------------------------
+                             --  Title:24进制计数电路               --
+                             --  Data: 2009-4-16                --
+                             -------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+--------------------------------------------------------------------
+entity count24 is
+  port( Clk_10KHz       :  in  std_logic;  --复位输入
+		Reset         :  in  std_logic;  --复位输入
+        Clk         :  in  std_logic;  --时钟输入
+        Clk_5Hz         :  in  std_logic;  --复位输入
+        SET         :  in  std_logic;  --时钟输入
+		temp_clk    :   buffer std_logic;
+        CountOut       :  buffer  std_logic_vector(5 downto 0) --24进制计数输出
+       );      
+end count24;
+--------------------------------------------------------------------
+architecture behave of count24 is
+--signal temp_clk : std_logic;
+signal pre_temp_clk : std_logic;
+  begin
+
+    process(Clk_10KHz,Reset)
+      begin
+        if(Reset='0') then    --系统复位
+            temp_clk<='0';
+			pre_temp_clk <= '0';
+		elsif(Clk_10KHz'event and Clk_10KHz='1') then
+			if(SET='0')then
+				temp_clk<=Clk_5Hz;
+			else
+				temp_clk<=Clk;
+			end if;
+			pre_temp_clk<=temp_clk;
+		end if;
+    end process;
+
+    process(Clk_10KHz,Reset)
+      begin
+        if(Reset='0') then    --系统复位
+            CountOut<="000000";
+        elsif(Clk_10KHz'event and Clk_10KHz='1') then    --正常运行
+			if (temp_clk='1' or pre_temp_clk='0') then
+				  if(CountOut(3 downto 0)=9) then
+					CountOut<=CountOut+7;
+				  elsif(CountOut="100011")then
+					CountOut<="000000";
+				  else
+					CountOut<=CountOut+1;
+				  end if;
+			end if;
+        end if; 
+    end process;
+end behave;

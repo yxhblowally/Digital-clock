@@ -1,0 +1,40 @@
+----------------------------------------
+                             --  Title: 数码显示译码器的设计       --
+                             --  Data: 2009-4-19                   --
+                             -------------------------------—--------
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+--------------------------------------------------------------------
+entity deled is
+  port( d  :  in  std_logic_vector(3 downto 0);   --
+        ledag    :  out  std_logic_vector(6 downto 0)    --
+       );      
+end deled;
+--------------------------------------------------------------------
+architecture display of deled is
+begin 
+      process(d)--数码管显示 
+      begin
+      case  d  is
+          when  "0000" => ledag <="0111111";
+          when  "0001" => ledag <="0000110";
+          when  "0010" => ledag <="1011011";
+          when  "0011" => ledag <="1001111";
+          when  "0100" => ledag <="1100110";
+          when  "0101" => ledag <="1101101";
+          when  "0110" => ledag <="1111101";
+          when  "0111" => ledag <="0000111";
+          when  "1000" => ledag <="1111111";
+          when  "1001" => ledag <="1101111";
+          when  "1010" => ledag <="1110111";
+          when  "1011" => ledag <="1111100";
+          when  "1100" => ledag <="0111001";
+          when  "1101" => ledag <="1011110";
+          when  "1110" => ledag <="1111001";
+          when  "1111" => ledag <="1000000";
+          when  others => null;
+     end  case;
+   end  process;
+  end  display;
